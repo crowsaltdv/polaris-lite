@@ -1,0 +1,5 @@
+{
+	"buildCommand": "node tools/build.mjs",
+	"outputDirectory": "dist",
+	"rewrites": [{ "source": "/emulatorjs/:path*", "destination": "/games/selenite/emulatorjs/:path*" }]
+}

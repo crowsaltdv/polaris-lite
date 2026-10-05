@@ -1,0 +1,2 @@
+# Store every file byte-for-byte. The games are third-party files, and line-ending conversion can corrupt them.
+* -text

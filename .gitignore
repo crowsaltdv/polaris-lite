@@ -1,0 +1,26 @@
+# Build output (tools/build.mjs)
+/dist/
+
+# Left over from the server edition of Polaris: none of this belongs on a static host.
+# (data/ holds chat accounts and session tokens, so it must never be published.)
+/server.js
+/chat.js
+/music.js
+/presence.js
+/soundcloud.js
+/security.js
+/usage.js
+/usage-report.js
+/adhosts.js
+/sw.js
+/package-lock.json
+/node_modules/
+/data/
+/polaris/
+/vendor/guard.js
+
+# Secrets and local tooling
+.env
+.env.*
+.claude/
+*.log

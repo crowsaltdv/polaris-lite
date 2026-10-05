@@ -1,0 +1,2 @@
+# Netlify and Cloudflare Pages. Some emulator games (Pokemon, Zelda, Metroid, ...) load EmulatorJS from /emulatorjs/ at the site root.
+/emulatorjs/*  /games/selenite/emulatorjs/:splat  200

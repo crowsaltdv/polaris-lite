@@ -1,0 +1,4 @@
+# Netlify: connect the repository and deploy. The build step only assembles the public files into dist/ (see tools/build.mjs).
+[build]
+  command = "node tools/build.mjs"
+  publish = "dist"
