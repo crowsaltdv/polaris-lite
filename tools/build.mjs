@@ -10,7 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const MARK = ".polaris-lite-build"; // written into every output folder, so we only ever wipe folders we made ourselves
+const MARK = ".lunaris-lite-build"; // written into every output folder, so we only ever wipe folders we made ourselves
 
 const args = process.argv.slice(2);
 const opt = (name) => {

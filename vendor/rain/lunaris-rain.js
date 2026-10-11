@@ -1,4 +1,4 @@
-// Polaris glue for the Codrops RainEffect (see README.txt).
+// Lunaris glue for the Codrops RainEffect (see README.txt).
 // Turns the chosen background image into the two textures the effect wants (a sharp one that
 // shows through the drops and a blurred one for the glass) and manages size, start/stop and parallax.
 import Raindrops from "./raindrops.js";
@@ -15,7 +15,7 @@ function loadImg(src, cors = false) {
 	});
 }
 
-// WebGL may only read images that allow it (CORS). Polaris Lite is a static site with no image proxy, so a remote
+// WebGL may only read images that allow it (CORS). Lunaris Lite is a static site with no image proxy, so a remote
 // picture only works when its host sends CORS headers; uploaded and generated pictures (data: URLs) always work.
 function loadPicture(url) {
 	return loadImg(url, /^https?:/i.test(url));

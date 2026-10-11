@@ -1,4 +1,4 @@
-// Local preview server for Polaris Lite. The site itself is plain static files and needs no server in production;
+// Local preview server for Lunaris Lite. The site itself is plain static files and needs no server in production;
 // this exists because browsers won't run the page from file:// (module imports, game iframes).
 //   node tools/serve.mjs            -> http://localhost:3031
 //   PORT=8080 HOST=0.0.0.0 node tools/serve.mjs   (HOST=0.0.0.0 lets phones on your network open it)
@@ -47,7 +47,7 @@ http
 			serve(req, res, file, st);
 		});
 	})
-	.listen(PORT, HOST, () => console.log(`Polaris Lite: http://${HOST === "0.0.0.0" ? "localhost" : HOST}:${PORT}  (Ctrl+C to stop)`));
+	.listen(PORT, HOST, () => console.log(`Lunaris Lite: http://${HOST === "0.0.0.0" ? "localhost" : HOST}:${PORT}  (Ctrl+C to stop)`));
 
 function serve(req, res, file, st) {
 	const headers = {

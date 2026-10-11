@@ -1,8 +1,8 @@
 {
-	"name": "polaris-lite",
+	"name": "lunaris-lite",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Polaris Lite: a static games hub with Home, Games and Settings.",
+	"description": "Lunaris Lite: a static games hub with Home, Games and Settings.",
 	"type": "module",
 	"scripts": {
 		"start": "node tools/serve.mjs",

@@ -1,7 +1,7 @@
 # Build output (tools/build.mjs)
 /dist/
 
-# Left over from the server edition of Polaris: none of this belongs on a static host.
+# Left over from the server edition of Lunaris: none of this belongs on a static host.
 # (data/ holds chat accounts and session tokens, so it must never be published.)
 /server.js
 /chat.js

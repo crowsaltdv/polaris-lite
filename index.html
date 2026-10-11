@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Polaris Lite</title>
+<title>Lunaris Lite</title>
 <meta name="referrer" content="no-referrer">
 <link rel="stylesheet" href="vendor/fa/css/all.min.css">
 <style>
@@ -60,7 +60,7 @@ main>*{pointer-events:auto}
 .panel h2{margin:0 0 8px;font-size:22px}.panel p{margin:0 0 16px;opacity:.8;font-size:14px;line-height:1.5}
 .panel button{background:var(--glass);border:1px solid var(--line);border-radius:10px;padding:8px 16px;transition:background .25s}
 .panel button:hover{background:rgba(var(--mid),.4)}
-/* ---------- Polaris Full menu ---------- */
+/* ---------- Lunaris Full menu ---------- */
 .dock button.txt{padding:10px 14px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.09em;white-space:nowrap}
 @media(max-width:640px){.dock button.txt{padding:10px 8px;font-size:10px;letter-spacing:.04em}.dock .sep.pf{display:none}}
 .panel.fullmenu{z-index:20;text-align:center}
@@ -182,7 +182,7 @@ function applyTheme(bg,ac){
   INKRGB=ink.join(',');ACRGB=A.join(',');SDRGB=sd.join(',');
 }
 var STARICON="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23a8defc' d='M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z'/%3E%3C/svg%3E";
-var CLOAKS=[{id:'polaris',n:'Polaris Lite',t:'Polaris Lite',i:''},
+var CLOAKS=[{id:'lunaris',n:'Lunaris Lite',t:'Lunaris Lite',i:''},
  {id:'google',n:'Google',t:'Google',i:'https://www.google.com/favicon.ico'},
  {id:'classroom',n:'Classroom',t:'Classes',i:'https://ssl.gstatic.com/classroom/favicon.png'},
  {id:'clever',n:'Clever',t:'Clever | Portal',i:'https://www.google.com/s2/favicons?domain=clever.com&sz=64'},
@@ -193,8 +193,8 @@ var CLOAKS=[{id:'polaris',n:'Polaris Lite',t:'Polaris Lite',i:''},
  {id:'bing',n:'Bing',t:'Bing',i:'https://www.bing.com/sa/simg/favicon-2x.ico'}];
 function applyCloak(id){var c=CLOAKS.filter(function(x){return x.id===id})[0]||CLOAKS[0],l=document.getElementById('favicon');
   document.title=c.t;if(!l){l=document.createElement('link');l.id='favicon';l.rel='icon';document.head.appendChild(l)}l.removeAttribute('type');l.href=c.i||STARICON}
-var CK='polaris';try{CK=localStorage.getItem('polaris-lite-cloak')||'polaris'}catch(e){}
-if(!CLOAKS.some(function(c){return c.id===CK}))CK='polaris';
+var CK='lunaris';try{CK=localStorage.getItem('lunaris-lite-cloak')||'lunaris'}catch(e){}
+if(!CLOAKS.some(function(c){return c.id===CK}))CK='lunaris';
 applyCloak(CK);
 var DEFAULT_TH={bg:'#0d0f12',ac:'#d5dae3'};
 var DEFAULT_BG={url:'https://images.pexels.com/photos/24604748/pexels-photo-24604748.jpeg?cs=srgb&dl=pexels-willianjusten-24604748.jpg&fm=jpg',dim:.03,blur:7,rain:true,rv:2};
@@ -204,7 +204,7 @@ function applyBg(){var st=document.documentElement.style,cl=document.documentEle
   if(BG.url){st.setProperty('--bgimg',cssUrl(BG.url));st.setProperty('--bgdim',BG.dim);st.setProperty('--bgblur',BG.blur+'px');cl.add('hasbg')}else{st.removeProperty('--bgimg');cl.remove('hasbg')}
   cl.toggle('rainset',!!(BG.url&&BG.rain))
   if(typeof rainSync==='function')rainSync()}
-try{if(localStorage.getItem('polaris-lite-rain')==='0')BG.rain=false}catch(e){}
+try{if(localStorage.getItem('lunaris-lite-rain')==='0')BG.rain=false}catch(e){}
 applyBg();
 applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
 </script>
@@ -217,7 +217,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
 <div class="top">
   <div class="brand">
     <svg class="star" width="22" height="22" viewBox="0 0 24 24"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg>
-    Polaris Lite
+    Lunaris Lite
   </div>
   <span id="clock"></span>
 </div>
@@ -225,7 +225,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
 <main>
   <div class="hero" id="hero">
     <svg class="star" viewBox="0 0 24 24"><path d="M12 1l2.4 8.6L23 12l-8.6 2.4L12 23l-2.4-8.6L1 12l8.6-2.4z"/></svg>
-    <h1>Polaris Lite</h1>
+    <h1>Lunaris Lite</h1>
   </div>
   <div class="pills">
     <button class="pill" data-p="Games">Games</button>
@@ -244,7 +244,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
     </div>
     <div class="note" id="gnote">
       <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-      <p><b>Polaris Lite</b> is a stripped down version of Polaris with only games. Use the <button type="button" class="notelink" id="notefull">POLARIS FULL</button> button on the bottom bar for links to the full version of Polaris, which has music, proxies, and more.</p>
+      <p><b>Lunaris Lite</b> is a stripped down version of Lunaris with only games. Use the <button type="button" class="notelink" id="notefull">LUNARIS FULL</button> button on the bottom bar for links to the full version of Lunaris, which has music, proxies, and more.</p>
     </div>
     <div class="grid" id="glist"></div>
   </div>
@@ -276,7 +276,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
     </div>
     <div class="card">
       <h3><i class="fa-solid fa-user-secret"></i>Tab Cloak</h3>
-      <p>Make Polaris Lite look like something harmless in your tab bar.</p>
+      <p>Make Lunaris Lite look like something harmless in your tab bar.</p>
       <div class="cgrid" id="cgrid"></div>
     </div>
     <div class="card">
@@ -305,7 +305,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
     </div>
     <div class="card">
       <h3><i class="fa-solid fa-window-restore"></i>Window cloak</h3>
-      <p>The Privacy button opens Polaris Lite inside a disguised window, using your Tab Cloak title and icon. If nothing opens, allow pop-ups for this site.</p>
+      <p>The Privacy button opens Lunaris Lite inside a disguised window, using your Tab Cloak title and icon. If nothing opens, allow pop-ups for this site.</p>
       <div class="seg" id="cmode" role="group" aria-label="Cloak method"><button type="button" data-m="about">about:blank</button><button type="button" data-m="blob">blob:</button></div>
       <p id="cmodehint"></p>
       <button class="chip" id="cloakbtn" type="button">Open now</button>
@@ -323,7 +323,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
 </div>
 
 <div class="panel fullmenu" id="fullmenu" role="dialog" aria-labelledby="fmt">
-  <h2 id="fmt">Full Polaris</h2>
+  <h2 id="fmt">Full Lunaris</h2>
   <div class="flinks">
     <a href="https://poopoo.downingdns.xyz/" target="_blank" rel="noopener noreferrer">poopoo.downingdns.xyz<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
     <a href="https://polarisisthebest.foff.ch/" target="_blank" rel="noopener noreferrer">polarisisthebest.foff.ch<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
@@ -345,7 +345,7 @@ applyTheme(DEFAULT_TH.bg,DEFAULT_TH.ac);
   <button data-p="Settings" aria-label="Settings"><svg viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></button>
   <button data-p="Privacy" aria-label="Privacy"><svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/></svg></button>
   <div class="sep pf"></div>
-  <button class="txt" id="full" type="button" aria-haspopup="dialog" aria-expanded="false">POLARIS FULL</button>
+  <button class="txt" id="full" type="button" aria-haspopup="dialog" aria-expanded="false">LUNARIS FULL</button>
   <button id="hide" aria-label="Hide menu"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
 </nav>
 <button class="reveal" id="reveal" aria-label="Show menu"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button>
@@ -442,12 +442,12 @@ document.getElementById('sback').addEventListener('click',function(){show('Home'
 var bgMsg=document.getElementById('bgmsg'),rainSw=document.getElementById('rainsw');
 function bgmsg(t){bgMsg.textContent=t||''}
 rainSw.setAttribute('aria-checked',String(!!BG.rain));
-rainSw.addEventListener('click',function(){BG.rain=!BG.rain;rainFails=0;rainSw.setAttribute('aria-checked',String(BG.rain));bgmsg('');applyBg();try{localStorage.setItem('polaris-lite-rain',BG.rain?'1':'0')}catch(e){}});
+rainSw.addEventListener('click',function(){BG.rain=!BG.rain;rainFails=0;rainSw.setAttribute('aria-checked',String(BG.rain));bgmsg('');applyBg();try{localStorage.setItem('lunaris-lite-rain',BG.rain?'1':'0')}catch(e){}});
 
 // ---------- leave warning ----------
-var LV=false;try{LV=localStorage.getItem('polaris-lite-leave')==='1'}catch(e){}
+var LV=false;try{LV=localStorage.getItem('lunaris-lite-leave')==='1'}catch(e){}
 var lvsw=document.getElementById('lvsw');lvsw.setAttribute('aria-checked',String(LV));
-lvsw.addEventListener('click',function(){LV=!LV;lvsw.setAttribute('aria-checked',String(LV));try{localStorage.setItem('polaris-lite-leave',LV?'1':'0')}catch(e){}});
+lvsw.addEventListener('click',function(){LV=!LV;lvsw.setAttribute('aria-checked',String(LV));try{localStorage.setItem('lunaris-lite-leave',LV?'1':'0')}catch(e){}});
 addEventListener('beforeunload',function(e){if(LV){e.preventDefault();e.returnValue=''}});
 
 // ---------- game fullscreen ----------
@@ -468,7 +468,7 @@ async function rainBuild(){
   if(rainBusy||!rainWanted())return;
   rainBusy=true;var key=rainKey();
   try{
-    var mod=await import('./vendor/rain/polaris-rain.js');
+    var mod=await import('./vendor/rain/lunaris-rain.js');
     if(!rainFx)rainFx=mod.createRainFx(document.getElementById('rain'));
     await rainFx.setScene(BG.url,BG.blur);rainSig=key;rainFails=0;
     if(/^Raindrops/.test(bgMsg.textContent))bgmsg('');
@@ -492,13 +492,13 @@ rainSync();
     else if(c.id==='newtab')ic.innerHTML='<i class="fa-solid fa-plus"></i>';
     else{var im=new Image();im.alt='';im.src=c.i;im.onerror=function(){ic.textContent='';var gi=document.createElement('i');gi.className='fa-solid fa-globe';ic.appendChild(gi)};ic.appendChild(im)}
     b.appendChild(ic);b.appendChild(n);
-    b.addEventListener('click',function(){CK=c.id;applyCloak(CK);updateCloakWin();try{localStorage.setItem('polaris-lite-cloak',CK)}catch(e){}[].forEach.call(g.children,function(x){x.classList.toggle('on',x.dataset.id===CK)})});
+    b.addEventListener('click',function(){CK=c.id;applyCloak(CK);updateCloakWin();try{localStorage.setItem('lunaris-lite-cloak',CK)}catch(e){}[].forEach.call(g.children,function(x){x.classList.toggle('on',x.dataset.id===CK)})});
     g.appendChild(b)})})();
 
 // ---------- panic button ----------
 var PANIC={hk:null,url:'https://www.google.com/'},capturing=false,hkv=document.getElementById('hkv'),purl=document.getElementById('purl'),pmsg=document.getElementById('pmsg');
-try{var _p=JSON.parse(localStorage.getItem('polaris-lite-panic'));if(_p){PANIC.hk=_p.hk||null;PANIC.url=_p.url||PANIC.url}}catch(e){}
-function savePanic(){try{localStorage.setItem('polaris-lite-panic',JSON.stringify(PANIC))}catch(e){}}
+try{var _p=JSON.parse(localStorage.getItem('lunaris-lite-panic'));if(_p){PANIC.hk=_p.hk||null;PANIC.url=_p.url||PANIC.url}}catch(e){}
+function savePanic(){try{localStorage.setItem('lunaris-lite-panic',JSON.stringify(PANIC))}catch(e){}}
 function hkName(h){return/^Key/.test(h.code)?h.code.slice(3):/^Digit/.test(h.code)?h.code.slice(5):h.key.length===1?h.key.toUpperCase():h.key}
 function hkText(h){return h?(h.ctrl?'Ctrl + ':'')+(h.alt?'Alt + ':'')+(h.shift?'Shift + ':'')+(h.meta?'Meta + ':'')+hkName(h):'not set'}
 function showHk(){hkv.textContent=capturing?'press keys\u2026':hkText(PANIC.hk);hkv.classList.toggle('cap',capturing)}
@@ -527,9 +527,9 @@ document.getElementById('psave').addEventListener('click',function(){var u=normU
 document.getElementById('ptest').addEventListener('click',function(){var u=normUrl(purl.value);if(!u){pnote('Enter a valid web address.');return}window.open(u,'_blank','noopener')});
 // ---------- tab cloak ----------
 var CMODE='about',cloakWin=null;
-try{CMODE=localStorage.getItem('polaris-lite-cmode')==='blob'?'blob':'about'}catch(e){}
+try{CMODE=localStorage.getItem('lunaris-lite-cmode')==='blob'?'blob':'about'}catch(e){}
 function escH(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function cloakMeta(){var c=CLOAKS.filter(function(x){return x.id===CK})[0];return c&&c.id!=='polaris'?c:null}
+function cloakMeta(){var c=CLOAKS.filter(function(x){return x.id===CK})[0];return c&&c.id!=='lunaris'?c:null}
 function cloakHtml(){
   var c=cloakMeta(),src=location.href.split('#')[0].split('?')[0];
   return'<!doctype html><html><head><meta charset="utf-8">'+(c?'<title>'+escH(c.t)+'</title><link id="ic" rel="icon" href="'+escH(c.i)+'">':'')+
@@ -556,8 +556,8 @@ function cloak(){
   cloakWin=w}
 function syncCmode(){
   [].forEach.call(document.querySelectorAll('#cmode button'),function(b){b.classList.toggle('on',b.dataset.m===CMODE)});
-  document.getElementById('cmodehint').textContent=CMODE==='blob'?'Opens a blob: page. The address bar shows a long blob: link instead of about:blank.':'Opens an empty about:blank tab with Polaris Lite loaded inside it.'}
-[].forEach.call(document.querySelectorAll('#cmode button'),function(b){b.addEventListener('click',function(){CMODE=b.dataset.m;try{localStorage.setItem('polaris-lite-cmode',CMODE)}catch(e){}syncCmode()})});
+  document.getElementById('cmodehint').textContent=CMODE==='blob'?'Opens a blob: page. The address bar shows a long blob: link instead of about:blank.':'Opens an empty about:blank tab with Lunaris Lite loaded inside it.'}
+[].forEach.call(document.querySelectorAll('#cmode button'),function(b){b.addEventListener('click',function(){CMODE=b.dataset.m;try{localStorage.setItem('lunaris-lite-cmode',CMODE)}catch(e){}syncCmode()})});
 syncCmode();document.getElementById('cloakbtn').addEventListener('click',cloak);
 
 // ---------- panels + dock ----------
@@ -573,12 +573,12 @@ function show(n){
   if(document.fullscreenElement)document.exitFullscreen();
   if(n==='Home'||any){panel.classList.remove('show');return}
   document.getElementById('pt').textContent=n;
-  document.getElementById('pd').textContent=n+' is coming soon to Polaris Lite.';
+  document.getElementById('pd').textContent=n+' is coming soon to Lunaris Lite.';
   panel.classList.add('show');
 }
 document.querySelectorAll('[data-p]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.p)})});
 document.getElementById('pc').addEventListener('click',function(){show('Home')});
-// ---------- Polaris Full menu (links to the full Polaris sites) ----------
+// ---------- Lunaris Full menu (links to the full Lunaris sites) ----------
 var fullBtn=document.getElementById('full'),fullMenu=document.getElementById('fullmenu');
 function fullOpen(on){fullMenu.classList.toggle('show',on);fullBtn.classList.toggle('on',on);fullBtn.setAttribute('aria-expanded',String(on));if(on)document.getElementById('fullclose').focus()}
 fullBtn.addEventListener('click',function(){fullOpen(!fullMenu.classList.contains('show'))});
